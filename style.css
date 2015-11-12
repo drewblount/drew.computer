@@ -16,9 +16,8 @@ body {
   color: 	#e53312;
 }
 
-
 .navbar {
-  border-color: 	#f6f6f6;
+  border: none;
   background: #f6f6f6;
   color: #e53312;
 }
@@ -28,11 +27,7 @@ a {
   text-decoration:underline;
 }
 
-a:hover{
-  color: #fff; 
-}
-
-a:visited, a:active{
+a:visited, a:active, a:hover{
   color: #e53312;
 }
 
@@ -40,17 +35,6 @@ h1 {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 22pt;
 }
-
-
-.sidebar .navbar-brand {
-  padding-left: 0;
-  color: #e53312;
-}
-
-.sidebar .navbar-header {
-  background: #f6f6f6
-}
-
 
 @media (min-width: 768px) {
   .sidebar .navbar li, .sidebar h1 {
@@ -63,24 +47,21 @@ h1 {
   }
 
 
+  /* these lines and other sidebar mechanics brought to us by http://www.jonathanbriehl.com/2014/01/17/vertical-menu-for-bootstrap-3/ */
   .sidebar .navbar .navbar-collapse {
     padding-right: 14px;
     max-height: none;
   }
-
   .sidebar .navbar ul {
     float: none;
   }
-
   .sidebar .navbar ul:not {
     display: block;
   }
-
   .sidebar .navbar li {
     float: none;
     display: block;
   }
-
   .sidebar .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -122,7 +103,7 @@ h1 {
     width:inherit;
   }
 
-    /* here I stagger the content block within the column, so that the cont-block's border-line doesn't extend to the edge of the screen */
+  /* here I stagger the content block within the column, so that the cont-block's border-line doesn't extend to the edge of the screen */
   .col-sm-9 {
     padding: 15px 15px 15px 0px;
   }
@@ -132,13 +113,27 @@ h1 {
 
 }
 
-.sidebar .navbar li a:visited, .sidebar .navbar li a:active {
-  color: #e53312
+.sidebar .navbar li > a, .navbar li >a:visited, .navbar li >a:active  {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #e53312;
+  text-decoration: none;
 }
 
-.sidebar .navbar li.active a, .sidebar .navbar li.active a:hover, .sidebar .navbar li.active a:active, .sidebar .navbar li.active a:visited, .sidebar .navbar li.active a:link{
+.sidebar .navbar li > a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .navbar li.active a,
+.sidebar .navbar li.active a:hover,
+.sidebar .navbar li.active a:active,
+.sidebar .navbar li.active a:visited,
+.sidebar .navbar li.active a:link
+{
   background-color: #e53312;
   color: #f6f6f6;
+  border-bottom-left-radius: 22px;
+  border-top-left-radius: 22px;
 }
 
 
@@ -149,18 +144,35 @@ h1 {
   .col-sm-9 {
     padding-top: 0px;
   }
-  button.navbar-toggle {
+  .sidebar .navbar-brand {
+    padding-left: 0;
+    color: #e53312;
+  }
+
+  .sidebar .navbar-header {
+    background: #f6f6f6
+  }
+
+
+
+  .navbar-header>button.navbar-toggle {
     margin-right: 0px;
+    background: #f6f6f6;
+    color: #e53312;
+    border-color: #e53312;
+    border-radius: 0px;
   }
-  navbar-header button.navbar-toggle:active, button,navbar-toggle:visited, button.navbar-toggle:focus, button.navbar-toggle:hover {
-    background-color: #e53312 !important;
+
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #e53312;
+    border-radius: 0px;
   }
-  
-  button.navbar-toggle:hover {
+  .navbar-default .navbar-toggle:active .icon-bar {
     background-color: #e53312;
   }
 
-  
+
   .navbar {
     border-bottom: 1px solid #e53312;
   }
