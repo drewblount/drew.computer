@@ -1,0 +1,186 @@
+
+
+/* (control-f to relplace any)
+COLOR PALETTE:
+background color: #f6f6f6
+text color (whiteish): 	#e53312
+text hover: #ddd
+another color I like: #00afd2
+a third: #fdc222
+
+ababab
+the background color is #f6f6f6 */
+
+body {
+  background: #f6f6f6;
+  color: 	#e53312;
+}
+
+
+.navbar {
+  border-color: 	#f6f6f6;
+  background: #f6f6f6;
+  color: #e53312;
+}
+
+a {
+  color: #e53312;
+  text-decoration:underline;
+}
+
+a:hover{
+  color: #fff; 
+}
+
+a:visited, a:active{
+  color: #e53312;
+}
+
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22pt;
+}
+
+
+.sidebar .navbar-brand {
+  padding-left: 0;
+  color: #e53312;
+}
+
+.sidebar .navbar-header {
+  background: #f6f6f6
+}
+
+
+@media (min-width: 768px) {
+  .sidebar .navbar li, .sidebar h1 {
+    text-align: right;
+  }  
+
+  .sidebar .navbar-collapse h1, .sidebar .navbar-collapse li {
+    width: 100%;
+    text-align: right;
+  }
+
+
+  .sidebar .navbar .navbar-collapse {
+    padding-right: 14px;
+    max-height: none;
+  }
+
+  .sidebar .navbar ul {
+    float: none;
+  }
+
+  .sidebar .navbar ul:not {
+    display: block;
+  }
+
+  .sidebar .navbar li {
+    float: none;
+    display: block;
+  }
+
+  .sidebar .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #e53312;
+    text-decoration: none;
+  }
+
+  .sidebar .navbar li a:hover {
+    text-decoration: underline;
+  }
+
+
+  .sidebar .navbar-header{ 
+    float: none; 
+  }
+
+
+  .sidebar h1{
+    padding-right: 14px;
+  }
+
+
+  .cont-block{
+    border-left: 1px solid #e53312;
+  }
+
+
+  /* this code defines to sidebar stickiness */
+  .sidebar.affix-top {
+    position: fixed;
+    margin-top:0px;
+  }
+  .sidebar.affix {
+    position: fixed;
+    margin-top:0px;
+  }
+
+  .sidebar {
+    width:inherit;
+  }
+
+    /* here I stagger the content block within the column, so that the cont-block's border-line doesn't extend to the edge of the screen */
+  .col-sm-9 {
+    padding: 15px 15px 15px 0px;
+  }
+  .col-sm-9 .cont-block {
+    padding-left: 15px;
+  }
+
+}
+
+.sidebar .navbar li a:visited, .sidebar .navbar li a:active {
+  color: #e53312
+}
+
+.sidebar .navbar li.active a, .sidebar .navbar li.active a:hover, .sidebar .navbar li.active a:active, .sidebar .navbar li.active a:visited, .sidebar .navbar li.active a:link{
+  background-color: #e53312;
+  color: #f6f6f6;
+}
+
+
+@media (max-width: 768px) {
+  .affix {
+    position: static;
+  }
+  .col-sm-9 {
+    padding-top: 0px;
+  }
+  button.navbar-toggle {
+    margin-right: 0px;
+  }
+  navbar-header button.navbar-toggle:active, button,navbar-toggle:visited, button.navbar-toggle:focus, button.navbar-toggle:hover {
+    background-color: #e53312 !important;
+  }
+  
+  button.navbar-toggle:hover {
+    background-color: #e53312;
+  }
+
+  
+  .navbar {
+    border-bottom: 1px solid #e53312;
+  }
+  .navbar-collapse h1 {
+    display: none;
+  }
+}
+
+
+
+
+/* this code defines to sidebar stickiness */
+
+
+/* little custom hackey-class for text outlining */
+.outline-text {
+  color: 	#e53312;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;  
+}
